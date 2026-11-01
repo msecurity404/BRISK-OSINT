@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+brisk-reports/
+reports/
+.DS_Store

@@ -1,0 +1,3 @@
+# The tool runs on the Python standard library alone.
+# dnspython is optional and makes DNS lookups faster and more complete.
+dnspython>=2.4

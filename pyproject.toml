@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brisk-osint"
+version = "1.0.0"
+description = "Brisk OSINT - external attack-surface and brand-protection intelligence framework"
+authors = [{ name = "Eng. Malek Al-astal" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+fast = ["dnspython>=2.4"]
+
+[project.scripts]
+brisk-osint = "brisk_osint.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["brisk_osint*"]
