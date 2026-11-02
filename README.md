@@ -1,68 +1,103 @@
-<p align="center">
-  <img src="assets/logo.png" alt="BRISK OSINT Logo" width="520">
+<div align="center">
+
+<img src="assets/logo.png" alt="BRISK Logo" width="560">
+
+# BRISK INTELLIGENCE ECOSYSTEM
+
+### OSINT RECONNAISSANCE • ARTIFICIAL INTELLIGENCE • CYBERSECURITY
+
+**Two powerful tools. One intelligence vision.**
+
+<p>
+  <img src="https://img.shields.io/badge/BRISK-OSINT-8B5CF6?style=for-the-badge" alt="BRISK OSINT">
+  <img src="https://img.shields.io/badge/BRISK-AI-F5B82E?style=for-the-badge" alt="BRISK AI">
 </p>
 
-<h1 align="center">BRISK OSINT</h1>
-
-<p align="center">
-  <strong>External Attack Surface Intelligence & Brand Protection Framework</strong>
+<p>
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-green?style=flat-square">
+  <img src="https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-black?style=flat-square">
+  <img src="https://img.shields.io/badge/License-See%20Repository-lightgrey?style=flat-square">
 </p>
 
-<p align="center">
-  <a href="https://github.com/msecurity404/BRISK-OSINT">
-    <img src="https://img.shields.io/badge/Project-BRISK%20OSINT-gold" alt="Project">
-  </a>
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version">
-  <img src="https://img.shields.io/badge/Python-3.9%2B-green" alt="Python">
-  <img src="https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-lightgrey" alt="Platform">
-</p>
+**Developed by Eng. Malek Al-astal | TechNova**
+
+[Repository](https://github.com/msecurity404/BRISK-OSINT) •
+[Report an Issue](https://github.com/msecurity404/BRISK-OSINT/issues)
+
+</div>
 
 ---
 
-## Overview
+# 01. About BRISK
 
-**BRISK OSINT** is a Python-based Open Source Intelligence (OSINT) framework designed to help security researchers and authorized security teams assess an organization's external digital footprint.
+**BRISK** is a cybersecurity and intelligence ecosystem built around two complementary command-line tools:
 
-It combines domain intelligence, DNS reconnaissance, email security analysis, subdomain discovery, brand impersonation checks, infrastructure intelligence, and historical URL analysis into one command-line tool.
+- **BRISK OSINT:** An open-source intelligence and external attack-surface reconnaissance framework.
+- **BRISK AI:** An interactive AI terminal assistant powered by Google's Gemini API.
 
-BRISK OSINT generates structured security reports in HTML, JSON, and Markdown formats.
+Together, they provide a practical environment for digital footprint discovery, security research, information analysis, and AI-assisted productivity.
 
-**Developed by Eng. Malek Al-astal**
+> Discover the footprint. Understand the data. Think smarter.
 
-**GitHub:** https://github.com/msecurity404
+## 02. Meet the Tools
 
----
+### BRISK OSINT — Intelligence & Reconnaissance
 
-## Key Features
+BRISK OSINT helps security researchers investigate publicly accessible information about domains, organizations, websites, and internet-facing infrastructure.
 
-- Domain and WHOIS/RDAP intelligence.
-- DNS record and infrastructure discovery.
-- Email security assessment: SPF, DMARC, DKIM, MTA-STS, and BIMI.
-- Subdomain discovery and takeover indicators.
-- Website technology and security-header fingerprinting.
-- Look-alike domain and typosquatting detection.
-- Historical URL intelligence through Wayback Machine.
+**Core capabilities:**
+
+- Domain intelligence and WHOIS/RDAP.
+- DNS records and infrastructure discovery.
+- Subdomain enumeration.
+- Email security analysis.
+- Website technology fingerprinting.
+- HTTP security headers and TLS information.
+- Look-alike domain and typosquatting checks.
+- Historical URL intelligence.
 - GitHub organization and public code intelligence.
-- Brand handle discovery across supported platforms.
+- Brand handle discovery.
 - Public breach catalogue checks.
-- Public IP and infrastructure intelligence.
-- Document and image metadata analysis.
-- Risk scoring and scan history comparison.
-- HTML, JSON, and Markdown report generation.
+- IP and infrastructure intelligence.
+- Document metadata analysis.
+- Risk indicators and scan history comparison.
+- HTML, JSON, and Markdown reports.
+
+### BRISK AI — Your Terminal AI Assistant
+
+BRISK AI is an interactive terminal assistant powered by the Gemini API.
+
+**Features:**
+
+- Interactive terminal conversation.
+- Multilingual communication.
+- AI-assisted explanations and research.
+- Model selection.
+- Conversation reset.
+- Export conversation to a file.
+- API key configuration.
+- Streaming responses.
+
+BRISK AI requires a valid Gemini API key.
+
+**Important:** BRISK AI is currently distributed separately from this BRISK OSINT repository. Its command is available on systems where BRISK AI has been installed and configured.
 
 ---
 
-## Installation
+# 03. Installation
 
-### Requirements
+## Requirements
 
+- Android with Termux, or a Linux environment.
 - Python 3.9 or newer.
 - Git.
-- Internet connection for online intelligence modules.
+- Internet connection.
+- Gemini API key for BRISK AI.
 
-### Termux (Android)
+## Install BRISK OSINT
 
-Update packages:
+### Termux
 
 ```bash
 pkg update -y && pkg upgrade -y
@@ -76,23 +111,17 @@ git clone https://github.com/msecurity404/BRISK-OSINT.git
 cd BRISK-OSINT
 ```
 
-Install:
+Install the framework:
 
 ```bash
 python -m pip install --upgrade pip
 python -m pip install -e ".[fast]"
 ```
 
-Run:
+If you do not need the optional DNS dependency:
 
 ```bash
-brisk-osint
-```
-
-If the command is unavailable, use:
-
-```bash
-python -m brisk_osint
+python -m pip install -e .
 ```
 
 ### Linux
@@ -102,214 +131,196 @@ git clone https://github.com/msecurity404/BRISK-OSINT.git
 cd BRISK-OSINT
 
 python3 -m pip install -e ".[fast]"
-brisk-osint
-```
-
-### Optional dependency
-
-The framework uses Python's standard library for its core functionality. The optional `fast` extra installs `dnspython` for additional DNS functionality.
-
-```bash
-python -m pip install dnspython
 ```
 
 ---
 
-## Usage
+# 04. Launch BRISK
 
-### Interactive Menu
+## Start BRISK OSINT Interface
 
-Start BRISK OSINT without arguments:
+Launch the interactive OSINT menu:
+
+```bash
+python -m brisk_osint
+```
+
+Or, after installation:
 
 ```bash
 brisk-osint
 ```
 
-The interactive menu provides:
+The interactive interface provides access to the available reconnaissance features.
 
-1. Domain Intelligence
-2. DNS & WHOIS
-3. Email Security
-4. IP Intelligence
-5. Technology Detection
-6. Metadata Analysis
-7. Look-alike Domains
-8. Brand Handles
-9. Scan History
-0. Exit
+## Start BRISK AI Interface
 
-### Domain Intelligence
+On a device where BRISK AI is installed:
 
-Run a full scan:
+```bash
+brisk
+```
+
+First-time setup:
+
+```bash
+brisk --setup
+```
+
+Follow the prompts to configure your Gemini API key.
+
+Check available options:
+
+```bash
+brisk -h
+```
+
+Select a model:
+
+```bash
+brisk -m MODEL_NAME
+```
+
+Start without animation:
+
+```bash
+brisk --no-anim
+```
+
+Display version information:
+
+```bash
+brisk -v
+```
+
+**BRISK AI installation note:** The BRISK AI executable is not included in this repository yet. The command above applies after its separate installation.
+
+---
+
+# 05. BRISK OSINT — Usage Guide
+
+## Full Domain Scan
 
 ```bash
 brisk-osint example.com
 ```
 
-Run a quick scan:
+Use a domain you own or are authorized to assess.
+
+## Quick Scan
 
 ```bash
 brisk-osint example.com -p quick
 ```
 
-Run a standard scan:
-
-```bash
-brisk-osint example.com -p standard
-```
-
-Run a full scan explicitly:
-
-```bash
-brisk-osint example.com -p full
-```
-
-### Select Specific Modules
-
-```bash
-brisk-osint example.com -m whois,dns,email,web
-```
-
-Scan subdomains and look-alike domains:
+## Select Modules
 
 ```bash
 brisk-osint example.com -m subdomains,typosquat
 ```
 
-List available modules:
-
-```bash
-brisk-osint --list-modules
-```
-
-Exclude modules:
-
-```bash
-brisk-osint example.com -x breaches,github
-```
-
-### Passive and Active Options
-
-Passive mode skips DNS brute-force:
+## Passive Reconnaissance
 
 ```bash
 brisk-osint example.com --passive
 ```
 
-Active mode enables light exposure probes against the target, including checks for paths such as `.git` and `.env`:
+## Active Checks
 
 ```bash
 brisk-osint example.com --active
 ```
 
-Only use active checks on systems you own or have explicit permission to assess.
+Active checks may probe exposed paths. Use them only within an authorized assessment scope.
 
-### Multiple Domains
+## Multiple Domains
 
 ```bash
 brisk-osint example.com example.org
 ```
 
-### IP Intelligence
+## IP Intelligence
 
 ```bash
 brisk-osint --ip 8.8.8.8
 ```
 
-### Metadata Analysis
-
-Analyze a local file or directory:
+## Metadata Analysis
 
 ```bash
 brisk-osint --metadata ./documents
 ```
 
-### Scan History
+## Scan History
 
 ```bash
 brisk-osint --history
 ```
 
-Disable history recording for a scan:
+## List Available Modules
 
 ```bash
-brisk-osint example.com --no-history
+brisk-osint --list-modules
+```
+
+## Help
+
+```bash
+brisk-osint --help
 ```
 
 ---
 
-## Modules
+# 06. BRISK AI — Interactive Commands
 
-| Module | Description |
+Start the assistant:
+
+```bash
+brisk
+```
+
+Available interactive commands:
+
+| Command | Function |
 |---|---|
-| `whois` | RDAP registration information, registrar, dates, DNSSEC, and expiry indicators. |
-| `dns` | A, AAAA, MX, NS, TXT, SOA, and CAA records, plus DNS and mail provider intelligence. |
-| `email` | SPF, DMARC, DKIM, MTA-STS, BIMI, and email spoofing-related checks. |
-| `web` | HTTP security headers, cookies, TLS certificate information, technology detection, robots.txt, and security.txt. |
-| `subdomains` | Subdomain discovery, DNS checks, wildcard filtering, and takeover indicators. |
-| `typosquat` | Look-alike domains, common variations, registration checks, and phishing-page indicators. |
-| `wayback` | Historical URLs and potentially sensitive archived paths. |
-| `github` | GitHub organization repositories and public code searches when a token is configured. |
-| `brands` | Brand-handle presence checks across supported online platforms. |
-| `breaches` | Public breach catalogue checks for a domain. |
-| `infra` | IP ownership, infrastructure information, exposed services, and potential vulnerability indicators. |
-| `metadata` | Metadata extraction from supported public documents and local files. |
+| `/help` | Display help |
+| `/clear` | Reset conversation |
+| `/model NAME` | Switch AI model |
+| `/save FILE` | Export conversation |
+| `/key` | Configure API key |
+| `/exit` | Exit assistant |
+
+BRISK AI uses Google's Gemini API. Availability and model access depend on the configured API key and Google's service.
 
 ---
 
-## Configuration
+# 07. Reports & Results
 
-BRISK OSINT does not require API keys for its basic operation.
+BRISK OSINT creates structured reports for each scan.
 
-Optional environment variables can enable additional intelligence:
-
-### GitHub Token
-
-Used for authenticated GitHub code search capabilities:
-
-```bash
-export GITHUB_TOKEN="YOUR_GITHUB_TOKEN"
-```
-
-### Shodan API Key
-
-Used for richer infrastructure and service intelligence:
-
-```bash
-export SHODAN_API_KEY="YOUR_SHODAN_API_KEY"
-```
-
-Keep API keys private. Never commit tokens, passwords, or secret configuration files to GitHub.
-
----
-
-## Reports
-
-Reports are saved in:
+Default report directory:
 
 ```text
 brisk-reports/
 ```
 
-Each scan creates a timestamped directory:
+Typical report structure:
 
 ```text
 brisk-reports/
-└── example.com_YYYYMMDD-HHMMSS/
+└── example.com_TIMESTAMP/
     ├── report.html
     ├── report.json
     └── report.md
 ```
 
-### Report Formats
-
-| File | Purpose |
+| Format | Description |
 |---|---|
-| `report.html` | Interactive HTML dashboard with severity filters and search. |
-| `report.json` | Structured scan data for integrations and automation. |
-| `report.md` | Human-readable Markdown report. |
+| HTML | Browser-readable security report |
+| JSON | Structured data for automation |
+| Markdown | Human-readable report |
 
-Choose report formats:
+Choose output formats:
 
 ```bash
 brisk-osint example.com -f html
@@ -319,90 +330,61 @@ brisk-osint example.com -f html
 brisk-osint example.com -f json,md
 ```
 
-Choose an output directory:
+Choose output directory:
 
 ```bash
 brisk-osint example.com -o reports/
 ```
 
-BRISK OSINT can compare a new domain scan with the previous scan and identify new and resolved findings.
+BRISK OSINT also supports scan history and comparison with previous results.
 
 ---
 
-## Advanced Options
+# 08. Configuration & API Keys
 
-| Option | Description |
-|---|---|
-| `-p, --profile` | Select `quick`, `standard`, or `full`. |
-| `-m, --modules` | Select comma-separated modules. |
-| `-x, --exclude` | Exclude selected modules. |
-| `--list-modules` | Display registered modules. |
-| `--active` | Enable light exposure probes. |
-| `--passive` | Skip DNS brute-force. |
-| `--ip` | Investigate a public IP address. |
-| `--metadata` | Analyze a local file or directory. |
-| `--history` | Display previous scans. |
-| `--no-history` | Disable scan history recording. |
-| `-o, --output` | Set report output directory. |
-| `-f, --format` | Select `json`, `html`, and/or `md`. |
-| `-t, --threads` | Set worker thread count. |
-| `--timeout` | Set network timeout in seconds. |
-| `--wordlist` | Provide an additional subdomain wordlist. |
-| `--github` | Specify a GitHub organization or user. |
-| `--brand` | Specify a brand label. |
-| `--max-permutations` | Set the maximum look-alike permutations. |
-| `--no-color` | Disable terminal colors. |
-| `--no-banner` | Hide the startup banner. |
-| `-q, --quiet` | Reduce terminal output. |
-| `--version` | Display the installed version. |
-| `-h, --help` | Display command help. |
+## BRISK OSINT
 
----
+Basic functionality does not require API keys.
 
-## Development
+Optional integrations:
 
-Run offline tests:
+**GitHub Token**
 
 ```bash
-python -m unittest discover -s tests
+export GITHUB_TOKEN="YOUR_GITHUB_TOKEN"
 ```
 
-Regenerate logo assets:
+**Shodan API Key**
 
 ```bash
-python tools/make_logo.py
+export SHODAN_API_KEY="YOUR_SHODAN_API_KEY"
 ```
 
-### Adding a Module
+These integrations can provide additional intelligence where supported by the corresponding modules.
 
-Create a Python module inside:
+## BRISK AI
 
-```text
-brisk_osint/modules/
+BRISK AI requires a Gemini API key.
+
+Configure it through:
+
+```bash
+brisk --setup
 ```
 
-A module should expose:
-
-- `NAME`
-- `DESC`
-- `PHASE`
-- `run(ctx)`
-
-Register the module in:
-
-```text
-brisk_osint/modules/__init__.py
-```
+Never publish API keys, passwords, or private configuration files.
 
 ---
 
-## Project Structure
+# 09. Project Structure
 
 ```text
 BRISK-OSINT/
+│
 ├── assets/
 │   ├── logo.png
 │   └── logo.svg
+│
 ├── brisk_osint/
 │   ├── modules/
 │   ├── cli.py
@@ -413,6 +395,7 @@ BRISK-OSINT/
 │   ├── dnsutil.py
 │   ├── branding.py
 │   └── ui.py
+│
 ├── tests/
 ├── tools/
 ├── .gitignore
@@ -423,19 +406,37 @@ BRISK-OSINT/
 
 ---
 
-## Legal & Responsible Use
+# 10. Development & Testing
 
-BRISK OSINT is intended for legitimate security research, defensive reconnaissance, and authorized security assessments.
+Run offline tests:
 
-- Only scan domains, IP addresses, and systems you own or have explicit permission to assess.
-- Respect applicable laws, privacy requirements, and third-party service terms.
-- Active probes should only be used within an authorized scope.
-- Findings are indicators that require verification; they are not a guarantee that a vulnerability exists.
-- The developer is not responsible for misuse of this software.
+```bash
+python -m unittest discover -s tests
+```
+
+Install in editable mode for development:
+
+```bash
+python -m pip install -e .
+```
 
 ---
 
-## Author
+# 11. Responsible Use
+
+BRISK is intended for authorized security research, defensive reconnaissance, and educational purposes.
+
+- Only assess systems you own or have explicit permission to test.
+- Respect privacy, applicable laws, and third-party service terms.
+- Do not use active checks outside an authorized scope.
+- Verify findings before treating them as confirmed vulnerabilities.
+- Do not use the tools to access, disrupt, or damage systems without authorization.
+
+The developer assumes no responsibility for unauthorized or unlawful use.
+
+---
+
+# 12. Credits & Contact
 
 **Eng. Malek Al-astal**  
 Founder & CEO — TechNova  
@@ -443,11 +444,18 @@ Cybersecurity & Information Security Engineering
 
 GitHub: [@msecurity404](https://github.com/msecurity404)
 
-Project: [BRISK OSINT](https://github.com/msecurity404/BRISK-OSINT)
+Project repository:
+
+https://github.com/msecurity404/BRISK-OSINT
 
 ---
 
-<p align="center">
-  <strong>BRISK OSINT</strong><br>
-  Intelligence. Visibility. Security.
-</p>
+<div align="center">
+
+# BRISK
+
+### INTELLIGENCE. VISIBILITY. SECURITY.
+
+**Powered by TechNova**
+
+</div>
